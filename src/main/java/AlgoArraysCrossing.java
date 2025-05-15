@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Algo1 {
+public class AlgoArraysCrossing {
     public static void main(String[] args) {
         int[] array1 = {1, 2, 3, 2, 0};
         int[] array2 = {5, 1, 2, 7, 3, 2, 2};

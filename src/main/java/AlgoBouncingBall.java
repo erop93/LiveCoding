@@ -1,20 +1,21 @@
 
-public class Algo2 {
+public class AlgoBouncingBall {
     public static void main(String[] args) {
         System.out.println(bouncingBall(3, 0.66, 1.5));
     }
 
     private static int bouncingBall(double h, double bounce, double window) {
+        // Отсекаем условия невыполнения
         if (h <= 0 || bounce < 0 || bounce > 1 || window > h) {
             return -1;
         }
 
-        int count = 0;
-        while (h > window) {
-            count++;
-            h = h * bounce;
-            if (h > window) {
-                count++;
+        int count = 0; // Счетчик сколько раз мать увидит мяч
+        while (h > window) { // Пока высота отскока мяча больше высоты окна
+            count++; // увеличиваем счетчик на 1
+            h = h * bounce; // задаем новую высоту с учетом коэффициента отскока
+            if (h > window) { // если новая высота всё ещё выше окна
+                count++; // снова увеличиваем счетчик на 1
             }
         }
         return count;
@@ -41,5 +42,4 @@ public class Algo2 {
      * - h = 3, bounce = 0.66, window = 1.5, result is 3
      * - h = 3, bounce = 1, window = 1.5, result is -1
      */
-
 }
