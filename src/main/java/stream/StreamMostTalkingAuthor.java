@@ -21,7 +21,6 @@ public class StreamMostTalkingAuthor {
     Необходимо реализовать метод, который посчитает кто из пользователей произнес наибольшее количество слов
     'numToView' указывает, сколько пользователей мы хотим увидеть в конце в порядке их болтливости.
     */
-
     public static List<String> findTheMostTalkingAuthor(List<String> records, Integer numToView) {
         return records.stream()
                 // Разбиваем каждую строку на 2 части через двоеточие (первое двоеточие)
